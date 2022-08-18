@@ -7,7 +7,7 @@ The classifier is then called Classifier_function.
 
 The classifier when varying the t-statistic is called NBS_vary_t_stat.
 
-#Tikhonov Partial correlation matrices
+Tikhonov Partial correlation matrices
 The file ... can be used to create Tikhonov parital correlation matrices.
 This relies on invChol_mex.c (https://www.mathworks.com/matlabcentral/fileexchange/34511-fast-and-accurate-symmetric-positive-definite-matrix-inverse-using-cholesky-decomposition)
 As this is a .c file it may need to be compiled before it works this is done by ensuring the path with the file invChol_mex.c is on your file path and then running the lines:
@@ -15,3 +15,6 @@ As this is a .c file it may need to be compiled before it works this is done by 
 mex -setup
 
 mex -O invChol_mex.c
+
+
+Note that in all cases the results presented in the paper are calculated using the random seed 1.
