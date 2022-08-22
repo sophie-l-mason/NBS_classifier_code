@@ -172,7 +172,7 @@ for a=1:c-1
 end
 
 if test==ones(c-1,1)
-    fprintf('monotonically decreasing! – the optimal choice of alpha may not be correct, check the data is normalised!\n')
+    fprintf('monotonically decreasing! â€“ the optimal choice of alpha may not be correct, check the data is normalised!\n')
 else
     fprintf('NOT monotonically decreasing :)\n')
 end
