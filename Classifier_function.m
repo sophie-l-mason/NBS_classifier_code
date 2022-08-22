@@ -1,4 +1,4 @@
-function [class_label,Accuracy,P_val, N_edges,step]=Classifier_function(Data,Design,contrast,N_perms,alpha,path)
+function [class_label,Accuracy,P_val, N_edges,step]=Classifier_function(Data,Design,contrast,N_perms,alpha,path,random_seed)
 % A function which calculates the leave one out cross validated accuracy
 % INPUT:
 % Data = NROIxNROIxN_Subj FC matrix
@@ -10,6 +10,7 @@ function [class_label,Accuracy,P_val, N_edges,step]=Classifier_function(Data,Des
 %           p-values
 % alpha = the threshold for significance below which the dysconnected network is significant
 % path = a path given as a char i.e. '~\documents\NBS_store'
+% random_seed = the value for the random seed 'shuffle' makes it random while a scalar i.e. 1 will generate the same values each time.
 % OUTPUT:
 %class_label = N_Subjx1 vector storing the class label assigned by the
 %              classifier to each of the subjects
@@ -58,7 +59,7 @@ LCC_70Nodes=1;% if 1 this will ensure you find the threshold where the
 
 mkdir([path '\Store'])
 for k=1:size(Data,3)
-    rng(1)
+    rng(random_seed)
     disp(['Loop ' num2str(k) ' out of ' num2str(size(Data,3))]) %Shows how far the loop you are
     clearvars nbs 
     
