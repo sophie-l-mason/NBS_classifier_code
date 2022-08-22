@@ -1,4 +1,4 @@
-function [Results,class_label]=NBS_vary_t_stat(Data,Design_matrix,contrast,N_perms,alpha,path,threshold_min,threshold_max,Title,y_label,figure_index)
+function [Results,class_label]=NBS_vary_t_stat(Data,Design_matrix,contrast,N_perms,alpha,path,threshold_min,threshold_max,Title,y_label,figure_index.random_seed)
 %% A function which calculates the leave one out cross validated accuracy
 % INPUT:
 % Data = NROIxNROIxN_Subj FC matrix
@@ -14,6 +14,7 @@ function [Results,class_label]=NBS_vary_t_stat(Data,Design_matrix,contrast,N_per
 %                 e.g. 0.01
 % threshold_max = the maximum t-statistic threshold you want to consider
 %                 e.g. 4.5
+% random_seed= the value for the random seed 'shuffle' makes it random while a scalar i.e 1 will generate the same values each time.
 % OUTPUT:
 % P_val = N_Subjx4 store of the p-values for each dysconnected network      
 %         created in the order
@@ -50,7 +51,7 @@ Unclassified=ones(N_thresh,1)*-99;
 Inaccuracy=ones(N_thresh,1)*-99;
 
 for k=1:N_Subj
-    rng(1)
+    rng(random_seed)
     disp(['Subject: ' num2str(k) ' out of ' num2str(N_Subj)])
     %Label the subject an early
     loo_Evening_k=Data; %(:,:,[1:22,24:38]);
