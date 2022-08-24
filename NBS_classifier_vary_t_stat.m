@@ -1,5 +1,5 @@
 function [Results,class_label]=NBS_classifier_vary_t_stat(Data,Design_matrix,contrast,N_perms,alpha,path,threshold_min,threshold_max,Title,y_label,figure_index.random_seed)
-% Classifier_function.m
+% NBS_classifier_vary_t_stat.m
 % Sophie Mason - University of Birmingham, 2022
 %
 % Copyright (c) 2022, Brunno Machado de Campos &  Sophie Mason
