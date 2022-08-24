@@ -18,5 +18,5 @@ Title='Random data' %title for the figure
 Y_Label='[ECP $>$ LCP]' %y label for the figure
 figure_index=1 %the number for figure window  
 % The classifier: optimised for varying the t-statistic threshold
-[Results,class_label]=NBS_vary_t_stat(Data,Design_matrix,contrast,N_perms,alpha,path,threshold_min,threshold_max,Title,Y_Label,figure_index,random_seed)
+[Results,class_label]=NBS_classifier_vary_t_stat(Data,Design_matrix,contrast,N_perms,alpha,path,threshold_min,threshold_max,Title,Y_Label,figure_index,random_seed)
 
