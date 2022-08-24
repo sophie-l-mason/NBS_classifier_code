@@ -1,8 +1,7 @@
-% Brunno Machado de Campos   &  Sophie Mason
-% University of Campinas        University of Birmingham 
-% 
-% Copyright (c) 2020,
-% Brunno Machado de Campos and Sophie Mason
+% Brunno Machado de Campos - University of Campinas, 2022
+% Sophie Mason - University of Birmingham, 2022
+
+% Copyright (c) 2022, Brunno Machado de Campos &  Sophie Mason
 % All rights reserved.
 % 
 % Redistribution and use in source and binary forms, with or without
