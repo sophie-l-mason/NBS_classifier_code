@@ -20,4 +20,3 @@ This file requires the fMRI timeseries for each region of interest per person.
 The other files are supporting files, with charpath.m, distance_wei.m and weight_conversion from the Brain Connectivity Toolbox and NBS_Fast is an editted version of NBS. This editted version removes some of the displayed text. This speeds up the NBS methodology, which is important when NBS is being repeated many times for each test subject. In addition, NBS_run will produce an output directly rather than needing to make nbs a global function in order to access information.
 
 Note that in all cases the results presented in the paper are calculated using the random seed 1.
-
